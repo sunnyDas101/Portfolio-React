@@ -1,0 +1,47 @@
+.about-section {
+  display: grid;
+  padding: 134px 86px 134px;
+  align-items: center;
+  gap: 115px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about-section-img {
+  height: 500px;
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-section-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.circle{
+  position: absolute;
+  left: 10px;
+  bottom: 30px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: animateCircle 2s infinite alternate; 
+  z-index: -1;
+}
+
+@keyframes animateCircle {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
